@@ -29,19 +29,19 @@ int main(int argc, char **argv) {
     }
     printf("Socket successfully created\n");
 
-    struct sockaddr_in client_address;
+    struct sockaddr_in server_address;
 
-    /* set client_address attributes here
+    /* set server_address attributes here
      * sin_family, sin_port, sin_addr, sin_zero need all be set
      * hint: you may want to look at htons(), htonl(), ntohs(), ntohl(),
      * memset(), bzero(), and inet_pton() functions
      */
 
     /* 
-     * Then, once client_address is configured, call connect()
+     * Then, once server_address is configured, call connect()
      * and store its return value in status.
      */
-    int status = connect(-1, (struct sockaddr *)&client_address, -1); // TODO insert correct arguments here
+    int status = connect(-1, (struct sockaddr *)&server_address, -1); // TODO insert correct arguments here
 
     if (status < 0) {
         printf("Connection unsuccessful");
